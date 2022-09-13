@@ -1,8 +1,13 @@
 .cursor{
     cursor: pointer;
     color: white;
+    text-shadow:4px 4px 10px #d46a4c;
 }
 
 .text-decorator-none{
     text-decoration: none;
+}
+
+.bg-menu{
+    background:#ECC06F !important;
 }
