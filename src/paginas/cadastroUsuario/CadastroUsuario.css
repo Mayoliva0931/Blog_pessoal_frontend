@@ -1,16 +1,28 @@
 .imagem2{
-    background-image: url(https://d31cp7lkikyah4.cloudfront.net/wp-content/uploads/2021/01/shutterstock_2096209246.jpg);
+    background-image: url(https://i.pinimg.com/564x/1a/f9/36/1af936b90823b7eec009df8ed9321d1b.jpg);
     background-repeat: no-repeat;
     width: 100vh;
-    min-height: 100vh;
+    height: 120vh;
     background-size: cover;
     background-position: center;
 }
 
 .textos2{
-    font-weight: bold !important;
+    font-family: 'Fredoka One', cursive !important; 
+    color:  #f3abab !important;
+
 }
 
 .btnCancelar{
     margin-right: 20px !important;
+    background-color: #e6b8ab !important;
+    color:  whitesmoke !important;
+    font-family: 'Fredoka One', cursive !important;
+}
+
+.fonte-fredoka{
+    margin-right: 20px !important;
+    background-color: #8dd8d4 !important;
+    color:  whitesmoke !important;
+    font-family: 'Fredoka One', cursive !important; 
 }
