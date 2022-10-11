@@ -15,7 +15,8 @@ function TabPostagem() {
       <TabContext value={value}>
         <AppBar position="static" className='bg2-menu'>
           <Tabs centered indicatorColor="secondary" onChange={handleChange}>
-            <Tab label="Todas as postagens" value="1"/>
+            <Tab label="Todas as postagens"  value="1"/>
+            
             <Tab label="Sobre-nós" value="2" />
           </Tabs>
         </AppBar>
@@ -25,8 +26,9 @@ function TabPostagem() {
           </Box>
         </TabPanel>
         <TabPanel value="2">
-          <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ut eveniet natus totam et, voluptate dicta tempore alias, odio nobis non eius cupiditate minima inventore pariatur! Ipsum itaque consectetur voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit consequuntur suscipit fugiat, nam quis quod quaerat veritatis et, vel ratione beatae, facere neque! Quo animi porro voluptate saepe deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci, officia aut quidem dolorum deserunt iure dolorem doloribus velit nobis quas consequatur at ullam odit, nesciunt est nulla nihil excepturi!</Typography>
+          <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo"> Sobre-nós</Typography>
+          <Typography variant="body1" gutterBottom color="textPrimary" align="justify"> Olá, meu nome é Mayara, sou formada em designer de interiores e atualmente estou em transição de carreira para área da tecnologia. Minhas experiências foram todas dentro do comércio como vendedora, operadora de caixa e subgerente, onde aprendi a trabalhar em equipe, e ter calma e paciência para resoluções de problemas. 
+            Tenho experiência na criação de ambientes funcionais e estéticos, e aprendi como aplicar as tendências de design na criação de aplicações digitais. Estou animada para começar um novo capítulo na minha carreira e acredito que minhas habilidades em design e criatividade vão ajudar a me destacar na tecnologia.</Typography>
         </TabPanel>
       </TabContext>
     </>

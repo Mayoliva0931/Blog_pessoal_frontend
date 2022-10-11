@@ -1,3 +1,15 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.cardTema{
+    width: 400px;
+    margin: 0 auto;
+    background-color: #F6F4F7 !important;
+    border: 1px solid white;
+}
+
+.pintarBtn2 {
+    background-color: #e6b8ab !important;
+    color:  whitesmoke !important;
+}

@@ -1,24 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import Postagem from '../../../models/Postagem';
-import { busca } from '../../../services/Service'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@mui/material';
+import { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaPostagem.css';
-import { useNavigate } from 'react-router-dom'
+import {Box, Grid} from "@mui/material";
+import Postagem from '../../../models/Postagem';
+import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import User from '../../../models/User';
+
+
 
 function ListaPostagem() {
+
   const [posts, setPosts] = useState<Postagem[]>([])
-  let navigate = useNavigate();
+  let history = useNavigate();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
-  );
+  )
 
   useEffect(() => {
     if (token == "") {
-      toast.error('Você precisa estar logado', {
+      toast.error('Você precisa estar logado!',{
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -27,8 +31,8 @@ function ListaPostagem() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    });
-      navigate("/login")
+        });
+      history("/login")
 
     }
   }, [token])
@@ -47,13 +51,17 @@ function ListaPostagem() {
 
   }, [posts.length])
 
+  
+
   return (
     <>
-      {
+    {
         posts.map(post => (
-          <Box m={2} >
-            <Card variant="outlined">
-              <CardContent>
+         
+          
+          <Box m={2} alignItems='center'>
+            <Card variant="outlined" className='card'>
+              <CardContent >
                 <Typography color="textSecondary" gutterBottom>
                   Postagens
                 </Typography>
@@ -64,22 +72,21 @@ function ListaPostagem() {
                   {post.texto}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {post.tema?.descricao}
+                  Tema: {post.tema?.descricao}
                 </Typography>
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
-
                   <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                     <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                      <Button variant="contained" className="marginLeft pintarBtn2" size='small' color="primary" >
                         atualizar
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                      <Button variant="contained" className="pintarBtn2" size='small'>
                         deletar
                       </Button>
                     </Box>
@@ -88,10 +95,9 @@ function ListaPostagem() {
               </CardActions>
             </Card>
           </Box>
-        ))
-      }
-    </>
-  )
+      ))
+    }
+    </>)
 }
 
 export default ListaPostagem;
