@@ -1,12 +1,15 @@
-.textos1{
-    font-weight: bold !important;
- }
+
+ .textos2{
+    font-family: 'Fredoka One', cursive !important; 
+    color:  #f3abab !important;
+
+}
  
  .imagem{
-     background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+     background-image: url(https://i.pinimg.com/564x/f8/5b/39/f85b398649948b285df73614a38959f7.jpg);
      background-repeat: no-repeat;
      width: 100vh;
-     min-height: 100vh;
+     min-height: 130vh;
      background-size: cover;
      background-position: center;
  }
